@@ -1,0 +1,198 @@
+.container{
+    display: grid;
+    width: 100%;
+    height: 100%;
+}
+html,
+body{
+    height: 100%;
+}
+.containerPage{
+    width: 100%;
+    height: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    flex: 1 1 auto;
+    padding: 0 30px;
+}
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.feedbackForm{
+    width: 100%;
+}
+.container__form{
+    width: 100%;
+    max-width: 600px;
+}
+
+.dlg-modal {
+    width: 100%;
+    max-width: 724px;
+    height: fit-content;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    z-index: 1002;
+    padding: 60px;
+    background: #fff;
+    border-radius: 10px;
+  
+  }
+  
+  .dlg-modal-fade {
+    /* это свойство прописано для селектора .dlg-modal */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px;
+  }
+  .overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.87);
+  }
+  .fadeIn,
+.fadeOut,
+.slideInDown,
+.slideOutUp {
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  opacity: 1;
+  visibility: visible;
+}
+.mySwiper{
+    height: fit-content;
+}
+.closer {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 30px;
+  }
+  .modal__music{
+    background-color: #2B2D34;
+
+  }
+
+  .text_thanks{
+    color: white;
+  }
+
+  .error{
+    color: red;
+  }
+
+  .form__label {
+    max-width: var(--form-label-width, 100%);
+  }
+  
+  
+  .form__placeholder {
+    display: flex;
+    gap: 5px;
+    font-family: Raleway;
+    position: absolute;
+    top: 0.4em;
+    left: 0;
+    font-size: var(--fz-placeholder, 1.125em);
+    color: black;
+    -webkit-transform: var(--placeholder-shows, translate(1em, 0));
+    -ms-transform: var(--placeholder-shows, translate(1em, 0));
+    transform: var(--placeholder-shows, translate(1em, 0));
+    -webkit-transition: font-size 0.3s, -webkit-transform 0.3s;
+    transition: font-size 0.3s, -webkit-transform 0.3s;
+    transition: transform 0.3s, font-size 0.3s;
+    transition: transform 0.3s, font-size 0.3s, -webkit-transform 0.3s;
+    pointer-events: none;
+  }
+  .form__clear {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    top: 0.400em;
+    right: 0;
+    width: 2.5em;
+    height: 3.125em;
+    background-color: transparent;
+    opacity: var(--clear-show, 0);
+    pointer-events: var(--clear-events, none);
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  }
+
+  .label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+
+  .label--is-active {
+    --placeholder-shows: translate(0, -2.3125em);
+    --clear-show: 1;
+    --clear-events: auto;
+    --fz-placeholder: 0.75em;
+  }
+
+  .margin-top{
+    margin-top: 40px;
+  }
+  .form__clear{
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+    margin-right: 5px;
+  }
+  .textarea{
+    height: 150px !important;
+  }
+ @media screen and (max-width: 768px){
+    .containerPage{
+        grid-template-columns: 1fr;
+    }
+ }
